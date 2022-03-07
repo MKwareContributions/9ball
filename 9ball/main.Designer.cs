@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.title = new System.Windows.Forms.Label();
             this.minButton = new System.Windows.Forms.PictureBox();
             this.closeButton = new System.Windows.Forms.PictureBox();
-            this.title = new System.Windows.Forms.Label();
             this.ball = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,6 +52,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(676, 30);
             this.panel1.TabIndex = 0;
+            // 
+            // title
+            // 
+            this.title.AutoSize = true;
+            this.title.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.ForeColor = System.Drawing.Color.White;
+            this.title.Location = new System.Drawing.Point(8, 8);
+            this.title.Name = "title";
+            this.title.Size = new System.Drawing.Size(58, 16);
+            this.title.TabIndex = 1;
+            this.title.Text = "9ball";
             // 
             // minButton
             // 
@@ -75,17 +86,6 @@
             this.closeButton.TabStop = false;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
-            // title
-            // 
-            this.title.AutoSize = true;
-            this.title.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title.ForeColor = System.Drawing.Color.White;
-            this.title.Location = new System.Drawing.Point(8, 8);
-            this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(58, 16);
-            this.title.TabIndex = 1;
-            this.title.Text = "9ball";
-            // 
             // ball
             // 
             this.ball.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -96,6 +96,7 @@
             this.ball.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.ball.TabIndex = 1;
             this.ball.TabStop = false;
+            this.ball.Click += new System.EventHandler(this.ball_Click);
             // 
             // label1
             // 

@@ -25,12 +25,15 @@ namespace _9ball
             this.shake.MouseEnter += new System.EventHandler(this.shake_MouseEnter);
             this.shake.MouseLeave += new System.EventHandler(this.shake_MouseLeave);
         }
-
+        private readonly Random rand = new Random();
+        public int Random(int min, int max)
+        {
+            return rand.Next(min, max);
+        }
         private void closeButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void minButton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -72,7 +75,20 @@ namespace _9ball
 
         private void shake_Click(object sender, EventArgs e)
         {
-            anim1(e, e);
+            int randanim = Random(1, 3);
+            switch(randanim)
+            {
+                case(1):
+                    anim1(e, e);
+                    break;
+                case(2):
+                    anim2(e, e);
+                    break;
+            }
+        }
+        private void ball_Click(object sender, EventArgs e)
+        {
+            this.ball.Image = _9ball.Properties.Resources._9ball;
         }
         private void anim1(object sender, EventArgs e)
         {
@@ -94,7 +110,31 @@ namespace _9ball
             Thread.Sleep(50);
             ball.Location = new Point(ball.Location.X + 2, ball.Location.Y + 2);
             Thread.Sleep(50);
-            ball.Location = new Point(ball.Location.X - 4, ball.Location.Y - 4);
+            ball.Location = new Point(ball.Location.X - 6, ball.Location.Y - 6);
+            Thread.Sleep(50);
+            ball.Location = new Point(ball.Location.X + 2, ball.Location.Y + 2);
+        }
+        private void anim2(object sender, EventArgs e)
+        {
+            ball.Location = new Point(ball.Location.X, ball.Location.Y + 5);       
+            System.Threading.Thread.Sleep(50);
+            ball.Location = new Point(ball.Location.X, ball.Location.Y - 10);
+            System.Threading.Thread.Sleep(50);
+            ball.Location = new Point(ball.Location.X, ball.Location.Y + 10);
+            System.Threading.Thread.Sleep(50);
+            ball.Location = new Point(ball.Location.X, ball.Location.Y - 10);
+            System.Threading.Thread.Sleep(50);
+            ball.Location = new Point(ball.Location.X, ball.Location.Y + 10);
+            System.Threading.Thread.Sleep(50);
+            ball.Location = new Point(ball.Location.X, ball.Location.Y - 10);
+            System.Threading.Thread.Sleep(50);
+            ball.Location = new Point(ball.Location.X, ball.Location.Y + 10);
+            System.Threading.Thread.Sleep(50);
+            ball.Location = new Point(ball.Location.X, ball.Location.Y - 10);
+            System.Threading.Thread.Sleep(50);
+            ball.Location = new Point(ball.Location.X, ball.Location.Y + 10);
+            System.Threading.Thread.Sleep(50);
+            ball.Location = new Point(ball.Location.X, ball.Location.Y - 5);
         }
     }
 }

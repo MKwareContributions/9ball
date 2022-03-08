@@ -76,6 +76,7 @@ namespace _9ball
         private void shake_Click(object sender, EventArgs e)
         {
             int randanim = Random(1, 5);
+            int rand = Random(1, 8);
             switch (randanim)
             {
                 case (1):
@@ -91,7 +92,30 @@ namespace _9ball
                     anim4(e, e);
                     break;
             }
-
+            switch (rand)
+            {
+                case (1):
+                    this.ball.Image = _9ball.Properties.Resources.yes;
+                    break;
+                case (2):
+                    this.ball.Image = _9ball.Properties.Resources.no;
+                    break;
+                case (3):
+                    this.ball.Image = _9ball.Properties.Resources.nodoubt;
+                    break;
+                case (4):
+                    this.ball.Image = _9ball.Properties.Resources.tryagain;
+                    break;
+                case (5):
+                    this.ball.Image = _9ball.Properties.Resources.hardtotell;
+                    break;
+                case (6):
+                    this.ball.Image = _9ball.Properties.Resources._100no;
+                    break;
+                case (7):
+                    this.ball.Image = _9ball.Properties.Resources._100yes;
+                    break;
+            }
         }
         private void ball_Click(object sender, EventArgs e)
         {

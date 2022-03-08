@@ -75,16 +75,8 @@ namespace _9ball
 
         private void shake_Click(object sender, EventArgs e)
         {
-            int randanim = Random(1, 3);
-            switch(randanim)
-            {
-                case(1):
-                    anim1(e, e);
-                    break;
-                case(2):
-                    anim2(e, e);
-                    break;
-            }
+            int randanim = Random(1, 4);
+            anim4(e, e);
         }
         private void ball_Click(object sender, EventArgs e)
         {
@@ -93,48 +85,86 @@ namespace _9ball
         private void anim1(object sender, EventArgs e)
         {
             ball.Location = new Point(ball.Location.X + 10, ball.Location.Y + 10);
-            Thread.Sleep(50);
+            Thread.Sleep(38);
             ball.Location = new Point(ball.Location.X - 20, ball.Location.Y - 20);
-            Thread.Sleep(50);
+            Thread.Sleep(38);
             ball.Location = new Point(ball.Location.X + 20, ball.Location.Y + 20);
-            Thread.Sleep(50);
+            Thread.Sleep(38);
             ball.Location = new Point(ball.Location.X - 16, ball.Location.Y - 16);
-            Thread.Sleep(50);
+            Thread.Sleep(38);
             ball.Location = new Point(ball.Location.X + 14, ball.Location.Y + 14);
-            Thread.Sleep(50);
+            Thread.Sleep(38);
             ball.Location = new Point(ball.Location.X - 10, ball.Location.Y - 10);
-            Thread.Sleep(50);
+            Thread.Sleep(38);
             ball.Location = new Point(ball.Location.X + 6, ball.Location.Y + 6);
-            Thread.Sleep(50);
+            Thread.Sleep(38);
             ball.Location = new Point(ball.Location.X - 2, ball.Location.Y - 2);
-            Thread.Sleep(50);
+            Thread.Sleep(38);
             ball.Location = new Point(ball.Location.X + 2, ball.Location.Y + 2);
-            Thread.Sleep(50);
+            Thread.Sleep(38);
             ball.Location = new Point(ball.Location.X - 6, ball.Location.Y - 6);
-            Thread.Sleep(50);
+            Thread.Sleep(38);
             ball.Location = new Point(ball.Location.X + 2, ball.Location.Y + 2);
         }
         private void anim2(object sender, EventArgs e)
         {
             ball.Location = new Point(ball.Location.X, ball.Location.Y + 5);       
-            System.Threading.Thread.Sleep(50);
+            Thread.Sleep(38);
             ball.Location = new Point(ball.Location.X, ball.Location.Y - 10);
-            System.Threading.Thread.Sleep(50);
+            Thread.Sleep(38);
             ball.Location = new Point(ball.Location.X, ball.Location.Y + 10);
-            System.Threading.Thread.Sleep(50);
+            Thread.Sleep(38);
             ball.Location = new Point(ball.Location.X, ball.Location.Y - 10);
-            System.Threading.Thread.Sleep(50);
+            Thread.Sleep(38);
             ball.Location = new Point(ball.Location.X, ball.Location.Y + 10);
-            System.Threading.Thread.Sleep(50);
+            Thread.Sleep(38);
             ball.Location = new Point(ball.Location.X, ball.Location.Y - 10);
-            System.Threading.Thread.Sleep(50);
+            Thread.Sleep(38);
             ball.Location = new Point(ball.Location.X, ball.Location.Y + 10);
-            System.Threading.Thread.Sleep(50);
+            Thread.Sleep(38);
             ball.Location = new Point(ball.Location.X, ball.Location.Y - 10);
-            System.Threading.Thread.Sleep(50);
+            Thread.Sleep(38);
             ball.Location = new Point(ball.Location.X, ball.Location.Y + 10);
-            System.Threading.Thread.Sleep(50);
+            Thread.Sleep(38);
             ball.Location = new Point(ball.Location.X, ball.Location.Y - 5);
+        }
+        private void anim3(object sender, EventArgs e)
+        {
+            ball.Location = new Point(ball.Location.X - 10, ball.Location.Y - 15);
+            Thread.Sleep(38);
+            ball.Location = new Point(ball.Location.X + 20, ball.Location.Y + 10);
+            Thread.Sleep(38);
+            ball.Location = new Point(ball.Location.X - 17, ball.Location.Y - 8);
+            Thread.Sleep(38);
+            ball.Location = new Point(ball.Location.X + 15, ball.Location.Y + 5);
+            Thread.Sleep(38);
+            ball.Location = new Point(ball.Location.X - 12, ball.Location.Y - 3);
+            Thread.Sleep(38);
+            ball.Location = new Point(ball.Location.X + 9, ball.Location.Y + 1);   
+            Thread.Sleep(38);
+            ball.Location = new Point(ball.Location.X - 3, ball.Location.Y + 10);  
+            Thread.Sleep(38);
+            ball.Location = new Point(ball.Location.X + 1, ball.Location.Y);
+            Thread.Sleep(38);
+            ball.Location = new Point(ball.Location.X - 3, ball.Location.Y);  
+        }
+        private void anim4(object sender, EventArgs e)
+        {
+            ball.Location = new Point(ball.Location.X - 15, ball.Location.Y + 15);  // + - right - - left
+            Thread.Sleep(38);
+            ball.Location = new Point(ball.Location.X + 30, ball.Location.Y);
+            Thread.Sleep(38);
+            ball.Location = new Point(ball.Location.X - 17, ball.Location.Y - 2);
+            Thread.Sleep(38);
+            ball.Location = new Point(ball.Location.X + 20, ball.Location.Y - 2);
+            Thread.Sleep(38);
+            ball.Location = new Point(ball.Location.X - 8, ball.Location.Y - 2);
+            Thread.Sleep(38);
+            ball.Location = new Point(ball.Location.X + 4, ball.Location.Y - 2);
+            Thread.Sleep(38);
+            ball.Location = new Point(ball.Location.X - 7, ball.Location.Y - 2);  //Y=5 X=7
+            Thread.Sleep(38);
+            ball.Location = new Point(ball.Location.X - 7, ball.Location.Y - 5);
         }
     }
 }

@@ -75,8 +75,23 @@ namespace _9ball
 
         private void shake_Click(object sender, EventArgs e)
         {
-            int randanim = Random(1, 4);
-            anim4(e, e);
+            int randanim = Random(1, 5);
+            switch (randanim)
+            {
+                case (1):
+                    anim1(e, e);
+                    break;
+                case (2):
+                    anim2(e, e);
+                    break;
+                case (3):
+                    anim3(e, e);
+                    break;
+                case (4):
+                    anim4(e, e);
+                    break;
+            }
+
         }
         private void ball_Click(object sender, EventArgs e)
         {
@@ -150,7 +165,7 @@ namespace _9ball
         }
         private void anim4(object sender, EventArgs e)
         {
-            ball.Location = new Point(ball.Location.X - 15, ball.Location.Y + 15);  // + - right - - left
+            ball.Location = new Point(ball.Location.X - 15, ball.Location.Y + 15);
             Thread.Sleep(38);
             ball.Location = new Point(ball.Location.X + 30, ball.Location.Y);
             Thread.Sleep(38);
@@ -162,7 +177,7 @@ namespace _9ball
             Thread.Sleep(38);
             ball.Location = new Point(ball.Location.X + 4, ball.Location.Y - 2);
             Thread.Sleep(38);
-            ball.Location = new Point(ball.Location.X - 7, ball.Location.Y - 2);  //Y=5 X=7
+            ball.Location = new Point(ball.Location.X - 7, ball.Location.Y - 2);
             Thread.Sleep(38);
             ball.Location = new Point(ball.Location.X - 7, ball.Location.Y - 5);
         }

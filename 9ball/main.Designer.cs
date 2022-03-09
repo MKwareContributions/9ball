@@ -30,16 +30,16 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.title = new System.Windows.Forms.Label();
-            this.minButton = new System.Windows.Forms.PictureBox();
-            this.closeButton = new System.Windows.Forms.PictureBox();
-            this.ball = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.shake = new System.Windows.Forms.Button();
+            this.ball = new System.Windows.Forms.PictureBox();
+            this.minButton = new System.Windows.Forms.PictureBox();
+            this.closeButton = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ball)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ball)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -63,40 +63,7 @@
             this.title.Size = new System.Drawing.Size(58, 16);
             this.title.TabIndex = 1;
             this.title.Text = "9ball";
-            // 
-            // minButton
-            // 
-            this.minButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.minButton.Image = global::_9ball.Properties.Resources.dash1;
-            this.minButton.Location = new System.Drawing.Point(617, 0);
-            this.minButton.Name = "minButton";
-            this.minButton.Size = new System.Drawing.Size(30, 30);
-            this.minButton.TabIndex = 1;
-            this.minButton.TabStop = false;
-            this.minButton.Click += new System.EventHandler(this.minButton_Click);
-            // 
-            // closeButton
-            // 
-            this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closeButton.Image = global::_9ball.Properties.Resources.cross1;
-            this.closeButton.Location = new System.Drawing.Point(646, 0);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(30, 30);
-            this.closeButton.TabIndex = 1;
-            this.closeButton.TabStop = false;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
-            // 
-            // ball
-            // 
-            this.ball.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ball.Image = global::_9ball.Properties.Resources._9ball;
-            this.ball.Location = new System.Drawing.Point(250, 150);
-            this.ball.Name = "ball";
-            this.ball.Size = new System.Drawing.Size(200, 200);
-            this.ball.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.ball.TabIndex = 1;
-            this.ball.TabStop = false;
-            this.ball.Click += new System.EventHandler(this.ball_Click);
+            this.title.Click += new System.EventHandler(this.title_Click);
             // 
             // label1
             // 
@@ -135,10 +102,45 @@
             this.shake.UseVisualStyleBackColor = false;
             this.shake.Click += new System.EventHandler(this.shake_Click);
             // 
+            // ball
+            // 
+            this.ball.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ball.Image = global::_9ball.Properties.Resources._9ball;
+            this.ball.Location = new System.Drawing.Point(250, 150);
+            this.ball.Name = "ball";
+            this.ball.Size = new System.Drawing.Size(200, 200);
+            this.ball.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.ball.TabIndex = 1;
+            this.ball.TabStop = false;
+            this.ball.Click += new System.EventHandler(this.ball_Click);
+            // 
+            // minButton
+            // 
+            this.minButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.minButton.Image = global::_9ball.Properties.Resources.dash1;
+            this.minButton.Location = new System.Drawing.Point(617, 0);
+            this.minButton.Name = "minButton";
+            this.minButton.Size = new System.Drawing.Size(30, 30);
+            this.minButton.TabIndex = 1;
+            this.minButton.TabStop = false;
+            this.minButton.Click += new System.EventHandler(this.minButton_Click);
+            // 
+            // closeButton
+            // 
+            this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeButton.Image = global::_9ball.Properties.Resources.cross1;
+            this.closeButton.Location = new System.Drawing.Point(646, 0);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(30, 30);
+            this.closeButton.TabIndex = 1;
+            this.closeButton.TabStop = false;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(700, 500);
             this.Controls.Add(this.shake);
             this.Controls.Add(this.label2);
@@ -148,12 +150,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "main";
-            this.Text = "Form1";
+            this.Text = "9ball";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ball)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ball)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

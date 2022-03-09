@@ -205,5 +205,10 @@ namespace _9ball
             Thread.Sleep(38);
             ball.Location = new Point(ball.Location.X - 7, ball.Location.Y - 5);
         }
+
+        private void title_Click(object sender, EventArgs e)
+        {
+            new about().Show();
+        }
     }
 }
